@@ -1,0 +1,1 @@
+# naver-flight-notifier
