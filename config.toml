@@ -1,0 +1,5 @@
+[Naver]
+URL="https://flight-api.naver.com"
+[Notifier]
+[Notifier.Discord]
+WebHookURL="https://discord.com/api/webhooks/1455522927155085447/R5KcrALS3bR4ZkUb34qbxCdkjm6nTOtc6ojitTekVui2DTEu2wl2aeBe2HtO1d9jFWmt"

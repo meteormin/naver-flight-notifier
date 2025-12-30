@@ -12,23 +12,17 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "naver-flight-notifier",
-	Short: "A brief description of your application",
-	Long: `A longer description that spans multiple lines and likely contains
-examples and usage of using your application. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
-	// Uncomment the following line if your bare application
-	// has an action associated with it:
-	// Run: func(cmd *cobra.Command, args []string) { },
+	Short: "네이버 항공 알림이",
+	Long:  `가성비 일본 여행을 위해 디스코드로 원하는 조건의 항공권 알림을 받아볼 수 있습니다.`,
+	RunE: func(cmd *cobra.Command, args []string) error {
+	},
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
 func Execute() {
 	var cfgFile string
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.naver-flight-notifier.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "./config.toml", "config file (default is ./config.toml)")
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
